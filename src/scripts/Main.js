@@ -11,7 +11,13 @@ class Main {
 
     new ComponentFactory();
 
+   
+
     document.documentElement.classList.add('has-js');
   }
+
+
+
+ 
 }
 new Main();
