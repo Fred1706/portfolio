@@ -1,6 +1,6 @@
 //FONTS
 // ici sont chargé les fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 // TOOLS
 // mixins et fonctions utilisés globalement dans le SCSS (Sass)
@@ -30,16 +30,6 @@
 // C’est là que la majorité de notre travail a lieu.
 @import '../../node_modules/swiper/swiper-bundle';
 @import 'components/icons';
-@import 'components/header';
-@import 'components/hero';
-@import 'components/actualites.scss';
-@import 'components/decouvrir.scss';
-@import 'components/bouton.scss';
-@import 'components/evenement.scss';
-@import 'components/services.scss';
-@import 'components/footer.scss';
-@import 'components/joindre.scss';
-@import 'components/scolly.scss';
-@import 'components/form.scss';
+
 // UTILITIES
 // Utilitaires et classes auxiliaires avec possibilité de remplacer tout ce qui précède, par exemple masquer les éléments de la page
