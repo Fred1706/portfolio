@@ -1,0 +1,26 @@
+.logo{
+    font-size:  #{typo(15px, 50px)};
+    
+}
+
+.header{
+    color: var(--color-black);
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+}
+
+
+.nav-menu{
+    ul{
+        list-style-type: none;
+        display: flex;
+        gap: 65px;
+        margin: 0;
+        padding: 0;
+    }
+}
