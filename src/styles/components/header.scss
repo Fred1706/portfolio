@@ -23,4 +23,32 @@
         margin: 0;
         padding: 0;
     }
+
+
+    a{
+        position: relative;
+        display: block;
+    }
+
+    a::before{
+        content: '';
+        bottom: 12%;
+        position: absolute;
+        height: 2px;
+        width: 0;
+        background: var(--color-black);
+        transition: all 0.3s ease-in;
+    }
+
+    a:hover::before{
+        width: 100%;
+    }
+
+
+
+
+
+
 }
+
+
