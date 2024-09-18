@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Scrolly from './components/Scrolly';
 import Accordion from './components/Accordion';
 import Form from './components/Form';
+import Preload from './components/Preload';
 
 export default class ComponentFactory {
   constructor() {
@@ -14,6 +15,7 @@ export default class ComponentFactory {
       Header,
       Youtube,
       Carousel,
+      Preload,
     };
     this.init();
   }
