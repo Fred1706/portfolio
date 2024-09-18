@@ -12,7 +12,7 @@
 
         gsap.to(time,{
           time : 100,
-          duration: 3 ,
+          duration: 1.5 ,
           onUpdate : ()=> {
           
             const timer = document.querySelector('.js-timer');
