@@ -3,10 +3,10 @@
    ========================================================================== */
 /// Font family
 :root {
-    --font-primary: 'Open Sans', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
+    --font-primary:"Rubik", sans-serif ;
+    --font-secondary:'Open Sans', sans-serif ;
 
-
+    
     --font-size-content: #{typo(10px, 28px)};
 
     /// Grosseur des textes
