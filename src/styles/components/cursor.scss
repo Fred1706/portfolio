@@ -1,0 +1,21 @@
+.cursor {
+    z-index: 500;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+html,
+a {
+    cursor: none;
+}
+
+
+.cursor-hover{
+    transform: scale(4);
+}
