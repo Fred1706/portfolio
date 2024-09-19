@@ -14,10 +14,16 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    
     .on-title , h1{
         color: var(--color-black);
         margin: 0;
+    }
+
+    .on-title{
+        margin-bottom: -20px;
+        font-weight: 300;
+        font-size:  #{typo(18px, 60px)};
     }
 }
 
