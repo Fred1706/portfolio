@@ -13,8 +13,8 @@ export default class Cursor{
         document.addEventListener('mousemove', (e) => {
 
 
-            cursor.style.top = e.clientY + 'px';
-            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.pageY + 'px';
+            cursor.style.left = e.pageX + 'px';
         })
 
         const links = document.getElementsByTagName('a')
