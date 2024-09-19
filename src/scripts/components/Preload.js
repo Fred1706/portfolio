@@ -1,41 +1,43 @@
- import gsap from "gsap";
- 
- 
- export default class Preload{
+import gsap from 'gsap';
 
-    constructor() {
-        this.init();
-      }
-    
-      init() {
-        const time = {time : 0}
+export default class Preload {
+  constructor() {
+    this.init();
+  }
 
-        gsap.to(time,{
-          time : 100,
-          duration: 1.5 ,
-          onUpdate : ()=> {
-          
-            const timer = document.querySelector('.js-timer');
-            const percent = Math.round(time.time);
-           
+  init() {
+    const time = { time: 0 };
+    const preload = document.querySelector('.js-preload');
 
-            timer.textContent = percent;
-          },
+    if (localStorage.getItem('visit') == 'no') {
+      preload.classList.toggle('preload-none');
+    }
 
-          onComplete: ()=> {
-            const preload = document.querySelector('.js-preload')
+    if (localStorage.getItem('visit') != 'no') {
+      localStorage.setItem('visit', 'yes');
+    }
 
-            preload.classList.toggle('preload-end')
-           }
-        } )
+    if (localStorage.getItem('visit') == 'yes') {
+      gsap.to(time, {
+        time: 100,
+        duration: 1.5,
+        onUpdate: () => {
+          const timer = document.querySelector('.js-timer');
+          const percent = Math.round(time.time);
 
-        
-        
-      }
+          timer.textContent = percent;
+        },
 
+        onComplete: () => {
+          const preload = document.querySelector('.js-preload');
 
-      
+          preload.classList.toggle('preload-end');
 
+          localStorage.setItem('visit', 'no');
 
-     
- }
+          console.log(localStorage.getItem('visit'));
+        },
+      });
+    }
+  }
+}
