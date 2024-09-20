@@ -16,15 +16,13 @@ class Main {
 
     document.documentElement.classList.add('has-js');
 
-    this.circleText();
-  }
-
-
-
-
-  circleText(){
    
   }
+
+
+
+
+  
  
 }
 new Main();
