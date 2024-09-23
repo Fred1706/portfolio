@@ -12,7 +12,7 @@ export default class Cursor {
     });
 
     // tous les projets
-    //const projets = document.querySelectorAll('.projets-hover');
+    const projets = document.querySelectorAll('.projets-hover');
 
     for (let i = 0; i < projets.length; i++) {
       const projet = projets[i];

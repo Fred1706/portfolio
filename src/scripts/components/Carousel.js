@@ -4,10 +4,12 @@ export default class Carrousel {
   constructor(element) {
     this.element = element;
     this.options = {
+      direction: "vertical",
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 50,
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
+        clickable: true,
       },
       navigation: {
         nextEl: this.element.querySelector('.swiper-button-next'),
@@ -18,7 +20,7 @@ export default class Carrousel {
   }
 
   init() {
-    console.log('yoo');
+    
     this.setOptions();
     let swiper = new Swiper(this.element, this.options);
   }
@@ -47,37 +49,6 @@ export default class Carrousel {
     if ('slides' in this.element.dataset) {
       this.options.slidesPerView =
         this.element.dataset.slides || this.options.slidesPerView;
-    }
-
-    if ('actualite' in this.element.dataset) {
-      this.options.slidesPerView = 3.5;
-      this.options.spaceBetween = 30;
-      this.options.breakpoints = {
-        0: {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-        },
-        400: {
-          slidesPerView: 1.3,
-          spaceBetween: 20,
-        },
-        500: {
-          slidesPerView: 1.5,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2.2,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 2.5,
-          spaceBetween: 30,
-        },
-        1400: {
-          slidesPerView: 3.5,
-          spaceBetween: 30,
-        },
-      };
     }
   }
 }
