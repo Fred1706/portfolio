@@ -6,7 +6,9 @@
     z-index: 5;
     overflow: hidden;
 
-    
+    .wrapper{
+        position: relative;
+    }
 
 
     
@@ -53,10 +55,11 @@
 
 
 .projet-media{
-    height: 90%;
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-left: 100px;
 
     a{
         
@@ -75,10 +78,11 @@
 }
 
 .projet-content{
+    margin-left:16% ;
     padding-top: 10px;
     width: 80%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
 
@@ -101,8 +105,11 @@
     width: 100%;
 }
 
+
+
 .swiper-slide{
     max-height: 100%;
+    opacity: inherit;
 }
 
 
@@ -126,6 +133,20 @@
     flex-direction: column;
     gap: 15px;
     align-items: flex-end;
+}
+
+
+
+.swiper2{
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    overflow: inherit;
+
+
+    .swiper-slide{
+       pointer-events: none;
+    }
 }
 
 

@@ -7,9 +7,9 @@ export default class Carrousel {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 50,
+      mousewheel: true,
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
-        clickable: true,
       },
       navigation: {
         nextEl: this.element.querySelector('.swiper-button-next'),
@@ -49,6 +49,16 @@ export default class Carrousel {
     if ('slides' in this.element.dataset) {
       this.options.slidesPerView =
         this.element.dataset.slides || this.options.slidesPerView;
+    }
+
+    if ('gap' in this.element.dataset) {
+      this.options.spaceBetween =
+        this.element.dataset.gap || this.options.spaceBetween;
+    }
+
+    if ('fade' in this.element.dataset) {
+      this.options.effect = 'fade'
+      
     }
   }
 }
