@@ -1,13 +1,29 @@
 import Swiper from 'swiper/bundle';
+import { Controller } from 'swiper/modules';
 
 export default class Carrousel {
   constructor(element) {
     this.element = element;
-    this.options = {
+    this.options1 = {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 50,
       mousewheel: true,
+      pagination: {
+        el: this.element.querySelector('.swiper-pagination'),
+      },
+      navigation: {
+        nextEl: this.element.querySelector('.swiper-button-next'),
+        prevEl: this.element.querySelector('.swiper-button-prev'),
+      },
+    };
+
+
+    this.options2 = {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 500,
+      effect: "fade",
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
       },
@@ -22,7 +38,18 @@ export default class Carrousel {
   init() {
     
     this.setOptions();
-    let swiper = new Swiper(this.element, this.options);
+
+    const premierSwiper = document.querySelector('.swiper1')
+    const deuxiemeSwiper = document.querySelector('.swiper2')
+
+    const swiper1 = new Swiper(premierSwiper, this.options1);
+
+    const swiper2 = new Swiper(deuxiemeSwiper, this.options2);
+
+    
+    
+    swiper1.controller.control = swiper2;
+
   }
 
   setOptions() {
