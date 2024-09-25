@@ -8,7 +8,11 @@ export default class Carrousel {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 50,
-      mousewheel: true,
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 1,
+        releaseOnEdges: true,
+    },
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
       },
@@ -37,10 +41,13 @@ export default class Carrousel {
 
   init() {
     
+
     this.setOptions();
 
+    
     const premierSwiper = document.querySelector('.swiper1')
     const deuxiemeSwiper = document.querySelector('.swiper2')
+    
 
     const swiper1 = new Swiper(premierSwiper, this.options1);
 
@@ -50,7 +57,16 @@ export default class Carrousel {
     
     swiper1.controller.control = swiper2;
 
+
+    
+
+  
+
+   
+    
   }
+
+  
 
   setOptions() {
     if ('split' in this.element.dataset) {
