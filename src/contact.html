@@ -1,27 +1,94 @@
-{% include "_partials/_header.html" %}
+{% include "_partials/_header.html" with {title:"Contact |"} %}
+
+<section class="contact">
+    <div class="wrapper">
+        <div class="grid">
+            <div class="contact-content">
+                <h1>contactez-moi</h1>
+
+                <div class="infos">
+                    <div class="info">
+                        <svg class="icon">
+                            <use xlink:href="#icon-couriel"></use>
+                        </svg>
+
+                        <a href="mailto:fred-eric.auger@outlook.com">fred-eric.auger@outlook.com</a>
+                    </div>
+
+                    <div class="info">
+                        <svg class="icon">
+                            <use xlink:href="#icon-telephone"></use>
+                        </svg>
+
+                        <a href="tel:+4385038050">438-503-8050</a>
+                    </div>
+
+                    <div class="info">
+                        <svg class="icon">
+                            <use xlink:href="#icon-telecharger"></use>
+                        </svg>
+
+                        <a href="assets/pdf/cv.pdf" download="cv">Curriculum vitea</a>
+                    </div>
+
+                    <div class="info">
+                        <svg class="icon">
+                            <use xlink:href="#icon-video"></use>
+                        </svg>
+
+                        <a href="youtube.com">Video de présentation</a>
+                    </div>
+                </div>
+
+                <img src="assets/images/fred-contact.jpg" alt="fred-eric auger" />
+            </div>
+
+            <form action="" class="form" autocomplete="off" data-component="Form">
+                <div class="form-body">
+                    <fieldset class="form-grid">
+
+                        
+                        <div class="input">
+                            <label class="input-label" for="lastname">nom</label>
+                            <input class="input-element" type="text" name="lastname" id="lastname" placeholder="ex : auger" required />
+                            <p>Ce champ est nécessaire</p>
+                        </div>
+
+                        <div class="input">
+                            <label class="input-label" for="firstname">prénom</label>
+                            <input class="input-element" type="text" name="firstname" id="firstname" placeholder="ex : fred-eric" required />
+                            <p>Ce champ est nécessaire</p>
+                        </div>
+
+                    </fieldset>
+
+                        <div class="input">
+                            <label class="input-label" for="email">adresse couriel</label>
+                            <input class="input-element" type="email" name="email" id="email" placeholder="ex : fred1942@outlook.fr" required />
+                            <p>Ce champ est nécessaire</p>
+                        </div>
+
+                        <div class="input text-area">
+                            <label class="input-label" for="comment">Votre message</label>
+                            <textarea class="input-element" name="comment" id="comment" maxlength="500" required></textarea>
+                            <p>Ce champ est nécessaire</p>
+                        </div>
+
+                    
+
+                    <footer class="form-footer">
+                        <a class="button bouton-form">Soumettre</a>
+                    </footer>
+                </div>
+
+                <div class="form-confirmation">
+                    <h2>Merci</h2>
+                    <p>Votre formulaire a bien été envoyé</p>
+                </div>
+
+            </form>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>contact</h1>
-
-
-
-
-
-
-
-
-
-
-{% include "_partials/_footer.html" %}
+        </div>
+    </div>
+</section>
