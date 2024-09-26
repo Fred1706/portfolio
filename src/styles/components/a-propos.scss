@@ -51,4 +51,53 @@
         font-size: #{typo(16px, 24px)};
         font-weight: 300;
     }
+
+    .lang-logi{
+        padding-top: 60px;
+        padding-bottom: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 130px;
+    }
+
+
+    .langage{
+        display: flex;
+        gap: 40px;
+        position: relative;
+        
+        p{
+            position: absolute;
+            top: 0;
+            left: 150%;
+            margin: 0;
+            color: var(--color-primary);
+            font-size: #{typo(24px, 80px)};
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.4s ease;
+        }
+
+        .gauche{
+            left: inherit;
+            right: 150%;
+            transform: translateX(100%);
+        }
+    }
+}
+
+
+.is-active{
+
+    p{
+        opacity: 1 !important; 
+        transform: translateX(0) !important;
+    }
+
+    
+    
 }
