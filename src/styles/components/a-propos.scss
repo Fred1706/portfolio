@@ -1,0 +1,54 @@
+.hero-propos {
+    background-color: var(--color-black);
+
+    h1,
+    .on-title {
+        color: var(--color-primary);
+    }
+}
+
+.header-propos {
+    mix-blend-mode: difference;
+
+    a {
+        color: var(--color-primary);
+    }
+
+    a::before {
+        background: var(--color-primary);
+    }
+}
+
+.moi {
+    position: relative;
+    z-index: 1;
+    padding: 100px;
+    background-color: var(--color-black);
+
+    h2 {
+        text-transform: inherit;
+        font-style: italic;
+        color: var(--color-primary);
+        font-size: #{typo(16px, 24px)};
+        font-weight: 300;
+    }
+
+    p {
+        font-size: #{typo(16px, 38px)};
+    }
+}
+
+.langages{
+    padding: 100px;
+    z-index: 1;
+    position: relative;
+    background-color: var(--color-black);
+
+    h2{
+        text-align: center;
+        text-transform: inherit;
+        color: var(--color-primary);
+        font-size: #{typo(16px, 24px)};
+        font-weight: 300;
+    }
+}
