@@ -1,5 +1,5 @@
 .form {
-    --input-padding: 1.1em;
+    --input-padding: 0.5em;
     fieldset {
         border: none;
         padding: 0;
@@ -7,15 +7,9 @@
 
     color: var(--color-black);
 
-    h2 {
-        margin-bottom: 35px;
-    }
+   
 
-    .gros {
-        font-size: #{typo(20px, 35px)};
-
-        grid-column: 1/-1;
-    }
+    
 }
 
 .form-grid {

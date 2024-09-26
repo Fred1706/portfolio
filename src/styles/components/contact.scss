@@ -1,5 +1,36 @@
 .contact{
-    padding-top: 150px;
+    padding-top: 130px;
     height: 100vh;
     width: 100vw;
+    position: relative;
+   
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+
+        
+        
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        gap: 175px;
+    }
+
+    h1{
+        font-size:  #{typo(20px, 70px)};
+        text-transform: uppercase;
+    }
+
+
+    
+}
+
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
