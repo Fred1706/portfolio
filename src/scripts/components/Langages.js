@@ -5,13 +5,9 @@ export default class Langages {
 
   init() {
     
-   
+   //https://gsap.com/community/forums/topic/37327-animating-a-simple-line-on-scroll/
 
-    const middle = window.innerHeight / 2;
-    const line = document.querySelector('.js-line');
-    const section = document.querySelector('.langages');
-    const htmlMiddke = section.innerHeight;
-    const info = window.scrollY;
+ 
 
     
 
