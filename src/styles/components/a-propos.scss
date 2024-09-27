@@ -44,6 +44,13 @@
     position: relative;
     background-color: var(--color-black);
 
+    .plus{
+        margin-top: 30px;
+    }
+
+    .wrapper{
+        overflow: hidden;
+    }
     h2{
         text-align: center;
         text-transform: inherit;
@@ -63,6 +70,8 @@
         align-items: center;
         gap: 130px;
     }
+
+    
 
 
     .langage{
@@ -112,4 +121,15 @@
     height: 100%;
     width: 4px;
     background: var(--color-primary);
+    transform: translateX(-50%);
+}
+
+
+
+
+.qualite{
+    position: relative;
+    height: 100vh;
+    background-color: var(--color-black);
+    z-index: 1;
 }

@@ -1,6 +1,6 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
-import Langages from './components/langages';
+import Langages from './components/Langages';
 
 
 class Main {
