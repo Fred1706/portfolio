@@ -7,6 +7,7 @@ import Form from './components/Form';
 import Preload from './components/Preload';
 import Cursor from './components/cursor';
 
+
 export default class ComponentFactory {
   constructor() {
     this.componentList = {

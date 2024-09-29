@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default class Langages {
@@ -10,9 +12,9 @@ export default class Langages {
   }
 
   init() {
-    //https://gsap.com/community/forums/topic/37327-animating-a-simple-line-on-scroll/
-
     this.ligne();
+    this.horizontalSCroll();
+    
 
     const observer = new IntersectionObserver(this.observe.bind(this), {
       rootMargin: '-45% 0px',
@@ -42,7 +44,7 @@ export default class Langages {
     const lineWrapper = document.querySelector('.js-line-wrapper');
 
     
-    console.log(lineWrapper.offsetHeight);
+    
 
     gsap.set(line, { transformOrigin: 'center top', xPercent: -50, x: 0 });
 
@@ -64,4 +66,26 @@ export default class Langages {
       }
     );
   }
+
+  horizontalSCroll(){
+    const container = document.querySelector('.js-horizontal')
+    const containers = gsap.utils.toArray('.js-horizontals');
+
+    gsap.to(containers, {
+      xPercent:-100 * (containers.length - 1),
+      scrollTrigger:{
+         trigger: container,
+         pin:true,
+         scrub: 1,
+      }
+    });
+
+
+
+
+
+  }
+
+
+  
 }

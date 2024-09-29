@@ -1,3 +1,9 @@
+.body-propos{
+    background-color: var(--color-black);
+}
+
+
+
 .hero-propos {
     background-color: var(--color-black);
 
@@ -20,6 +26,7 @@
 }
 
 .moi {
+    width: 100vw;
     position: relative;
     z-index: 1;
     padding: 100px;
@@ -38,20 +45,21 @@
     }
 }
 
-.langages{
+.langages {
+    width: 100vw;
     padding: 100px 0;
     z-index: 1;
     position: relative;
     background-color: var(--color-black);
 
-    .plus{
+    .plus {
         margin-top: 30px;
     }
 
-    .wrapper{
+    .wrapper {
         overflow: hidden;
     }
-    h2{
+    h2 {
         text-align: center;
         text-transform: inherit;
         color: var(--color-primary);
@@ -59,8 +67,8 @@
         font-weight: 300;
     }
 
-    .lang-logi{
-        --padding--logi : 60px;
+    .lang-logi {
+        --padding--logi: 60px;
         position: relative;
         padding-top: var(--padding--logi);
         padding-bottom: 130px;
@@ -71,15 +79,12 @@
         gap: 130px;
     }
 
-    
-
-
-    .langage{
+    .langage {
         display: flex;
         gap: 40px;
         position: relative;
-        
-        p{
+
+        p {
             position: absolute;
             top: 5%;
             left: 150%;
@@ -93,7 +98,7 @@
             transition: all 0.4s ease;
         }
 
-        .gauche{
+        .gauche {
             left: inherit;
             right: 150%;
             transform: translateX(100%);
@@ -103,22 +108,16 @@
     }
 }
 
-
-.is-active{
-
-    p{
-        opacity: 1 !important; 
+.is-active {
+    p {
+        opacity: 1 !important;
         transform: translateX(0) !important;
     }
-
-    
-    
 }
 
-
-.ligne-langage{
+.ligne-langage {
     position: absolute;
-    top: calc(var(--padding--logi)/3) ;
+    top: calc(var(--padding--logi) / 3);
     left: 50%;
     height: 100%;
     width: 4px;
@@ -126,12 +125,44 @@
     transform: translateX(-50%);
 }
 
-
-
-
-.qualite{
+.qualite {
+    
     position: relative;
-    height: 100vh;
     background-color: var(--color-black);
     z-index: 1;
+    display: flex;
+
+    .qualites,
+    .interets {
+        flex-shrink: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 100px;
+        color: var(--color-primary);
+
+
+        h2{
+            font-size: #{typo(25px, 80px)};
+        }
+
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+            margin-top: 50px;
+            padding-left: 75px;
+
+
+            li{
+                font-size: #{typo(18px, 35px)};
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+
+    
 }
