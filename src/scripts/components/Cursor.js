@@ -11,6 +11,22 @@ export default class Cursor {
       cursor.style.left = e.pageX + 'px';
     });
 
+    // tous les projets dans une page
+    const projetsPage = document.querySelectorAll('.projets-hover-page');
+
+    for (let i = 0; i < projetsPage.length; i++) {
+      const projet = projetsPage[i];
+
+      projet.addEventListener('mouseover', (e) => {
+        
+        cursor.classList.add('cursor-hover-projet-page');
+      });
+
+      projet.addEventListener('mouseout', (e) => {
+        cursor.classList.remove('cursor-hover-projet-page');
+      });
+    }
+
     // tous les projets
     const projets = document.querySelectorAll('.projets-hover');
 

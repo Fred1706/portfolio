@@ -1,6 +1,6 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
-import Langages from './components/Langages';
+
 
 
 class Main {
@@ -12,7 +12,7 @@ class Main {
     Icons.load();
 
     new ComponentFactory();
-    new Langages();
+    
     
     
    

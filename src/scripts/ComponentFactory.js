@@ -6,6 +6,7 @@ import Accordion from './components/Accordion';
 import Form from './components/Form';
 import Preload from './components/Preload';
 import Cursor from './components/cursor';
+import Langages from './components/Langages';
 
 
 export default class ComponentFactory {
@@ -19,6 +20,7 @@ export default class ComponentFactory {
       Carousel,
       Preload,
       Cursor,
+      Langages,
     };
     this.init();
   }

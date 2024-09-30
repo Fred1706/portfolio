@@ -19,13 +19,34 @@ a {
     transform: scale(2.5);
 }
 
-.cursor-hover-projet {
+.cursor-hover-projet{
     transform: scale(6);
     mix-blend-mode: inherit;
     transition: transform 0.7s ease;
 
     &::after {
         content: 'Voir le projet';
+        font-size: 4px;
+        font-weight: 600;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       
+
+        color: var(--color-black);
+    }
+}
+
+.cursor-hover-projet-page{
+    transform: scale(6);
+    mix-blend-mode: inherit;
+    transition: transform 0.7s ease;
+
+    &::after {
+        content: 'Voir le site';
         font-size: 4px;
         font-weight: 600;
         height: 100%;
