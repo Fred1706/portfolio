@@ -2,8 +2,6 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default class Langages {
@@ -15,7 +13,6 @@ export default class Langages {
     this.ligne();
     this.horizontalSCroll();
     this.competence();
-    
 
     const observer = new IntersectionObserver(this.observe.bind(this), {
       rootMargin: '-45% 0px',
@@ -44,9 +41,6 @@ export default class Langages {
     const line = document.querySelector('.js-line');
     const lineWrapper = document.querySelector('.js-line-wrapper');
 
-    
-    
-
     gsap.set(line, { transformOrigin: 'center top', xPercent: -50, x: 0 });
 
     gsap.fromTo(
@@ -60,47 +54,39 @@ export default class Langages {
         scrollTrigger: {
           trigger: lineWrapper,
           start: 'top center',
-          end:"bottom top",
+          end: 'bottom top',
           scrub: true,
-          once:true,
+          once: true,
         },
       }
     );
   }
 
-  horizontalSCroll(){
-    const container = document.querySelector('.js-horizontal')
+  horizontalSCroll() {
+    const container = document.querySelector('.js-horizontal');
     const containers = gsap.utils.toArray('.js-horizontals');
 
     gsap.to(containers, {
-      xPercent:-100 * (containers.length - 1),
-      scrollTrigger:{
-         trigger: container,
-         pin:true,
-         scrub: 1,
-      }
+      xPercent: -100 * (containers.length - 1),
+      scrollTrigger: {
+        trigger: container,
+        pin: true,
+        scrub: 1,
+      },
     });
-
-
-
-
-
   }
 
-
-
-  competence(){
+  competence() {
     const container = document.querySelector('.js-competences');
     const list = document.querySelector('.js-competence');
 
-
-    gsap.to(list,{
-      top: 100 ,
-      scrollTrigger:{
+    gsap.to(list, {
+      top: 100,
+      scrollTrigger: {
         trigger: container,
-        pin:true,
+        pin: true,
         scrub: 1,
-     }
+      },
     });
 
     const observer2 = new IntersectionObserver(this.observeLi.bind(this), {
@@ -115,9 +101,8 @@ export default class Langages {
     }
   }
 
-
-  observeLi(entries){
-    console.log('li')
+  observeLi(entries) {
+    console.log('li');
 
     for (let i = 0; i < entries.length; i++) {
       const entry = entries[i];
@@ -128,9 +113,4 @@ export default class Langages {
       }
     }
   }
-
-  
-
-
-  
 }

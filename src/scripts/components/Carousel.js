@@ -5,14 +5,14 @@ export default class Carrousel {
   constructor(element) {
     this.element = element;
     this.options1 = {
-      direction: "vertical",
+      direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 50,
       mousewheel: {
         forceToAxis: true,
         sensitivity: 1,
         releaseOnEdges: true,
-    },
+      },
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
       },
@@ -22,12 +22,11 @@ export default class Carrousel {
       },
     };
 
-
     this.options2 = {
-      direction: "vertical",
+      direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 500,
-      effect: "fade",
+      effect: 'fade',
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
       },
@@ -40,33 +39,17 @@ export default class Carrousel {
   }
 
   init() {
-    
-
     this.setOptions();
 
-    
-    const premierSwiper = document.querySelector('.swiper1')
-    const deuxiemeSwiper = document.querySelector('.swiper2')
-    
+    const premierSwiper = document.querySelector('.swiper1');
+    const deuxiemeSwiper = document.querySelector('.swiper2');
 
     const swiper1 = new Swiper(premierSwiper, this.options1);
 
     const swiper2 = new Swiper(deuxiemeSwiper, this.options2);
 
-    
-    
     swiper1.controller.control = swiper2;
-
-
-    
-
-  
-
-   
-    
   }
-
-  
 
   setOptions() {
     if ('split' in this.element.dataset) {
@@ -100,8 +83,7 @@ export default class Carrousel {
     }
 
     if ('fade' in this.element.dataset) {
-      this.options.effect = 'fade'
-      
+      this.options.effect = 'fade';
     }
   }
 }

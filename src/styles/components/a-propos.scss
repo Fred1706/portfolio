@@ -1,8 +1,6 @@
-.body-propos{
+.body-propos {
     background-color: var(--color-black);
 }
-
-
 
 .hero-propos {
     background-color: var(--color-black);
@@ -84,7 +82,7 @@
         gap: 40px;
         position: relative;
 
-        img{
+        img {
             z-index: 2;
         }
 
@@ -130,7 +128,6 @@
 }
 
 .qualite {
-    
     position: relative;
     background-color: var(--color-black);
     z-index: 1;
@@ -144,37 +141,29 @@
         padding: 100px;
         color: var(--color-primary);
 
-
-        h2{
+        h2 {
             font-size: #{typo(25px, 80px)};
         }
 
-
-        ul{
+        ul {
             list-style-type: none;
             display: flex;
             flex-direction: column;
             gap: 65px;
             margin-top: 50px;
-            padding-left: 75px;
+            padding: 0;
 
-
-            li{
+            li {
                 font-size: #{typo(18px, 35px)};
             }
-            span{
+            span {
                 font-weight: 600;
             }
         }
     }
-
-    
 }
 
-
-
-
-.competences{
+.competences {
     padding: 100px 0;
     background-color: var(--color-black);
     z-index: 1;
@@ -183,24 +172,20 @@
     color: var(--color-primary);
     overflow: hidden;
 
-
-    .wrapper{
+    .wrapper {
         display: flex;
         justify-content: space-between;
     }
 
-    h2{
-       height: fit-content;
-       transform-origin: left;
-       transform: rotate(90deg);
-       font-size: #{typo(25px, 40px)};
-       font-weight: 300;
-        
+    h2 {
+        height: fit-content;
+        transform-origin: left;
+        transform: rotate(90deg);
+        font-size: #{typo(25px, 40px)};
+        font-weight: 300;
     }
 
-
-
-    ul{
+    ul {
         position: absolute;
         top: 100%;
         right: 0;
@@ -212,7 +197,7 @@
         gap: 30px;
         padding-right: 80px;
 
-        li{
+        li {
             font-size: #{typo(30px, 75px)};
             font-weight: 600;
             text-transform: uppercase;
@@ -222,7 +207,6 @@
     }
 }
 
-
-.li-is-active{
+.li-is-active {
     opacity: 1 !important;
 }
