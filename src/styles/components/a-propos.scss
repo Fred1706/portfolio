@@ -166,3 +166,59 @@
 
     
 }
+
+
+
+
+.competences{
+    padding: 100px 0;
+    background-color: var(--color-black);
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    color: var(--color-primary);
+    overflow: hidden;
+
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2{
+       height: fit-content;
+       transform-origin: left;
+       transform: rotate(90deg);
+       font-size: #{typo(25px, 40px)};
+       font-weight: 300;
+        
+    }
+
+
+
+    ul{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-right: 80px;
+
+        li{
+            font-size: #{typo(30px, 75px)};
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: all 0.7s ease;
+        }
+    }
+}
+
+
+.li-is-active{
+    opacity: 1 !important;
+}

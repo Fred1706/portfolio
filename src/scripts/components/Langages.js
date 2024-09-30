@@ -14,6 +14,7 @@ export default class Langages {
   init() {
     this.ligne();
     this.horizontalSCroll();
+    this.competence();
     
 
     const observer = new IntersectionObserver(this.observe.bind(this), {
@@ -85,6 +86,50 @@ export default class Langages {
 
 
   }
+
+
+
+  competence(){
+    const container = document.querySelector('.js-competences');
+    const list = document.querySelector('.js-competence');
+
+
+    gsap.to(list,{
+      top: 100 ,
+      scrollTrigger:{
+        trigger: container,
+        pin:true,
+        scrub: 1,
+     }
+    });
+
+    const observer2 = new IntersectionObserver(this.observeLi.bind(this), {
+      rootMargin: '-80% 0px',
+    });
+
+    const li = document.querySelectorAll('.js-li');
+
+    for (let i = 0; i < li.length; i++) {
+      const nom = li[i];
+      observer2.observe(nom);
+    }
+  }
+
+
+  observeLi(entries){
+    console.log('li')
+
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      const target = entry.target;
+
+      if (entry.isIntersecting) {
+        target.classList.add('li-is-active');
+      }
+    }
+  }
+
+  
 
 
   
