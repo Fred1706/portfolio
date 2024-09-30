@@ -138,23 +138,27 @@
         flex-shrink: 0;
         width: 100vw;
         height: 100vh;
-        padding: 100px;
+        padding:100px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
         color: var(--color-primary);
 
         h2 {
-            font-size: #{typo(25px, 80px)};
+            font-size: #{typo(25px, 60px)};
         }
 
         ul {
             list-style-type: none;
             display: flex;
             flex-direction: column;
-            gap: 65px;
-            margin-top: 50px;
+            gap: 40px;
+            
             padding: 0;
 
             li {
-                font-size: #{typo(18px, 35px)};
+                font-size: #{typo(18px, 25px)};
             }
             span {
                 font-weight: 600;
