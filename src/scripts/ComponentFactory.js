@@ -7,6 +7,7 @@ import Form from './components/Form';
 import Preload from './components/Preload';
 import Cursor from './components/cursor';
 import Langages from './components/Langages';
+import Projet from './components/Projet';
 
 
 export default class ComponentFactory {
@@ -21,6 +22,7 @@ export default class ComponentFactory {
       Preload,
       Cursor,
       Langages,
+      Projet,
     };
     this.init();
   }

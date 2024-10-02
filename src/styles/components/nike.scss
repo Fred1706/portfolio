@@ -1,3 +1,6 @@
+
+
+
 .but {
     padding-top: 140px;
     position: relative;
@@ -102,3 +105,32 @@
         background-color: var(--color-primary);
     }
 }
+
+.design{
+    
+}
+
+
+
+.design , .integrations{
+    position: relative;
+    background-color: var(--color-black);
+    z-index: 1;
+    display: flex;
+
+   
+}
+
+ .ideation , .structure , .integration , .interactivite{
+        flex-shrink: 0;
+        width: 100vw;
+        height: 100vh;
+        padding:100px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        color: var(--color-primary);
+
+        
+    }
