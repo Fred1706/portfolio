@@ -39,6 +39,11 @@ export default class Carrousel {
   }
 
   init() {
+    
+
+
+
+
     this.setOptions();
 
     const premierSwiper = document.querySelector('.swiper1');
@@ -50,6 +55,8 @@ export default class Carrousel {
 
     swiper1.controller.control = swiper2;
   }
+
+  
 
   setOptions() {
     if ('split' in this.element.dataset) {

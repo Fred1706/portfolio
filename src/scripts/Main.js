@@ -1,8 +1,6 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
 
-
-
 class Main {
   constructor() {
     this.init();
@@ -12,20 +10,7 @@ class Main {
     Icons.load();
 
     new ComponentFactory();
-    
-    
-    
-   
-
     document.documentElement.classList.add('has-js');
-
-   
   }
-
-
-
-
-  
- 
 }
 new Main();
