@@ -13,9 +13,17 @@ body {
     background-color: var(--color-white);
     
   
+    ::selection{
+        color:var(--color-black);
+        background: var(--color-primary);
+    }
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+
+  
+  
