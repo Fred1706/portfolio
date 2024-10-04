@@ -59,11 +59,15 @@
 
 
 
-
-
+<section class="err">
+    
 <h1>page non disponible</h1>
 
-<a href="index.html">Retouner a l'acceuil</a>
+<a class="button" href="index.html">Retouner a l'acceuil</a>
+
+
+</section>
+
 
 
 <style>
@@ -72,69 +76,56 @@
         color: var(--color-black);
     }
 
+    a{
+        margin-right: auto;
+    }
 
+    section.err{
+        position: relative;
+        z-index: 1;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        padding: 100px;
+    }
+
+    footer{
+        padding: 0 100px;
+    }
+
+   
 </style>
 
 
 
-<footer class="footer">
-    <div class="wrapper">
+<footer class="footer-bottom">
+    <p>Fred-Eric Auger © Tous droits réservés 2024.</p>
 
-        <div class="footer-top"> 
-        
-        <div class="footer-title">
-            <h1>Contactez-moi</h1>
+    <nav class="footer-socials">
+        <ul>
 
-            <a href="contact.html" class="button">Contact</a>
-        </div>
+            <li><a href="https://www.linkedin.com/in/fred-eric-auger">
+                <svg class="icon icon--lg">
+                    <use xlink:href="#icon-linkin"></use>
+                </svg>
+            </a></li> 
 
-        <div class="footer-line"></div>
-
-        <div class="footer-info">
-            <p>fred-eric.auger@outlook.com</p>
-
-            <p>438-503-8050</p>
-        </div>
-
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>Fred-Eric Auger © Tous droits réservés 2024.</p>
-
-
-        <nav class="footer-socials">
-            <ul>
-               
-                <li><a href="https://www.linkedin.com/in/fred-eric-auger">
-                    <svg class="icon icon--lg">
-                        <use xlink:href="#icon-linkin"></use>
-                    </svg>
-                </a></li> 
-
-                <li><a href="https://codepen.io/fred1706">
-                    <svg class="icon icon--lg">
-                        <use xlink:href="#icon-codepen"></use>
-                    </svg>
-                </a></li> 
-                
-                <li><a href="https://github.com/Fred1706">
-                    <svg class="icon icon--lg">
-                        <use xlink:href="#icon-github"></use>
-                    </svg>
-                </a></li>
-            </ul>
-        </nav>
-    </div>
-
-    </div>
-
-    
-
-   
-
-
-
+            <li><a href="https://codepen.io/fred1706">
+                <svg class="icon icon--lg">
+                    <use xlink:href="#icon-codepen"></use>
+                </svg>
+            </a></li> 
+            
+            <li><a href="https://github.com/Fred1706">
+                <svg class="icon icon--lg">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            </a></li>
+            
+        </ul>
+    </nav>
 </footer>
 
 
