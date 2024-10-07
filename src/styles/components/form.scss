@@ -31,7 +31,7 @@
     display: block;
     color: var(--color-black);
     font-weight: 500;
-    
+    cursor: none;
 }
 
 .input-element {
@@ -41,7 +41,7 @@
     background-color: #dedede;
     border: none;
     border-radius: 10px ;
-    cursor: pointer;
+    cursor: none;
     font-family: inherit;
     outline: none;
 
