@@ -10,7 +10,7 @@ body {
     font-size: var(--font-size-content);
     font-weight: 300;
     line-height: 1.6;
-    background-color: var(--color-white);
+    background-color: var(--color-white) !important;
     
   
     ::selection{

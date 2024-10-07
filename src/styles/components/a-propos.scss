@@ -28,7 +28,7 @@
 }
 
 .header-propos {
-    mix-blend-mode: difference;
+    
 
     a {
         color: var(--color-primary);
@@ -44,7 +44,7 @@
     position: relative;
     z-index: 1;
     padding: 100px;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
 
     h2 {
         text-transform: inherit;
