@@ -1,6 +1,6 @@
 .cursor {
     z-index: 500;
-    position: absolute;
+    position: fixed;
     height: 30px;
     width: 30px;
     background: var(--color-primary);

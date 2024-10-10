@@ -7,8 +7,8 @@ export default class Cursor {
     const cursor = document.querySelector('.cursor');
 
     document.addEventListener('mousemove', (e) => {
-      cursor.style.top = e.pageY + 'px';
-      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
     });
 
     // tous les projets dans une page
@@ -18,7 +18,6 @@ export default class Cursor {
       const projet = projetsPage[i];
 
       projet.addEventListener('mouseover', (e) => {
-        
         cursor.classList.add('cursor-hover-projet-page');
       });
 
@@ -34,7 +33,6 @@ export default class Cursor {
       const projet = projets[i];
 
       projet.addEventListener('mouseover', (e) => {
-        
         cursor.classList.add('cursor-hover-projet');
       });
 
@@ -51,7 +49,6 @@ export default class Cursor {
       const link = links[i];
 
       link.addEventListener('mouseover', (e) => {
-        
         cursor.classList.add('cursor-hover');
       });
 
