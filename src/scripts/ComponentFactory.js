@@ -8,6 +8,7 @@ import Preload from './components/Preload';
 import Cursor from './components/cursor';
 import Langages from './components/Langages';
 import Projet from './components/Projet';
+import Projets from './components/Projets';
 
 
 export default class ComponentFactory {
@@ -23,6 +24,7 @@ export default class ComponentFactory {
       Cursor,
       Langages,
       Projet,
+      Projets,
     };
     this.init();
   }

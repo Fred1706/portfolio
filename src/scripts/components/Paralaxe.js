@@ -1,24 +1,11 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
+export default class Paralaxe {
+  constructor() {
+    this.init();
+  }
 
-
-
-export default class Paralaxe{
-    constructor(){
-
-
-        this.init();
-    }
-
-
-
-    init(){
-
-      
-        const locomotiveScroll = new LocomotiveScroll();
-
-
-    }
+  init() {
+    const locomotiveScroll = new LocomotiveScroll();
+  }
 }
-
-
