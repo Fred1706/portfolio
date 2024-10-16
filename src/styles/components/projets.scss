@@ -27,12 +27,13 @@
     left: 100px;
     top: 25%;
     h2 {
-        font-size: #{typo(55px, 150px)};
+        font-size: #{typo(55px, 130px)};
         color: var(--color-primary);
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        mix-blend-mode: difference;
 
         &::after {
             content: '';
@@ -67,6 +68,12 @@
         height: 100%;
         display: block;
         object-fit: cover;
+        filter: brightness(0.3);
+        transition: all 0.5s ease;
+
+        &:hover{
+            filter: brightness(0.7);
+        }
     }
 }
 
