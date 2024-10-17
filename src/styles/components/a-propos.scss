@@ -46,16 +46,30 @@
     padding: 100px;
     background-color: var(--color-black);
 
+    @media screen and (max-width: 900px) {
+        padding: 75px;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 50px;
+    }
+
+    @media screen and (max-width: 475px) {
+        padding: 20px;
+    }
+
+
+
     h2 {
         text-transform: inherit;
         font-style: italic;
         color: var(--color-primary);
-        font-size: #{typo(16px, 24px)};
+        font-size: #{typo(12px, 24px)};
         font-weight: 300;
     }
 
     p {
-        font-size: #{typo(16px, 32px)};
+        font-size: #{typo(14px, 32px)};
     }
 }
 
@@ -97,18 +111,54 @@
         display: flex;
         gap: 40px;
         position: relative;
+        
+        
 
         img {
             z-index: 2;
+
+            @media screen and (max-width: 860px) {
+                height: 90%;
+                width:  90%;
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: 620px) {
+                height: 70%;
+                width:  70%;
+                
+            }
+
+            @media screen and (max-width: 450px) {
+                height: 50%;
+                width:  50%;
+            }
         }
 
         p {
             position: absolute;
             top: 5%;
+
+            
+
+            @media screen and (max-width: 860px) {
+                top: 15%;
+                left: 120%;
+            }
+
+            @media screen and (max-width: 620px) {
+                top: 20%;
+            }
+
+            @media screen and (max-width: 450px) {
+                left: 100%;
+            }
             left: 150%;
+
+            
             margin: 0;
             color: var(--color-primary);
-            font-size: #{typo(24px, 60px)};
+            font-size: #{typo(16px, 60px)};
             font-weight: 600;
             text-transform: uppercase;
             opacity: 0;
@@ -119,6 +169,16 @@
         .gauche {
             left: inherit;
             right: 150%;
+
+            @media screen and (max-width: 860px) {
+                
+                right: 120%;
+            }
+
+           
+            @media screen and (max-width: 450px) {
+                right: 100%;
+            }
             transform: translateX(100%);
             width: 400px;
             text-align: right;
@@ -148,6 +208,7 @@
     background-color: var(--color-black);
     z-index: 1;
     display: flex;
+    overflow-x: hidden;
 
     .qualites,
     .interets {
