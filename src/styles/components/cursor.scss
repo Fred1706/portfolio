@@ -8,11 +8,19 @@
     transition: transform 0.7s ease;
     pointer-events: none;
     mix-blend-mode: difference;
+
+    @media screen and (max-width: 1366px) {
+        display: none;
+     }
 }
 
 html,
 a {
     cursor: none;
+
+    @media screen and (max-width: 1366px) {
+        cursor: inherit;
+     }
 }
 
 .cursor-hover {

@@ -12,20 +12,25 @@ body {
     line-height: 1.6;
     background-color: var(--color-white) !important;
     
-  
+    overflow-x: hidden;
+    
     ::selection{
         color:var(--color-black);
         background: var(--color-primary);
     }
 
-
+    
     
 }
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    
+    
 }
+
+
+
 
 
   

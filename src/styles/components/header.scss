@@ -1,11 +1,12 @@
 .logo{
-    font-size:  #{typo(15px, 40px)};
+    font-size:  #{typo(20px, 40px)};
     color:var(--color-primary);
     
     
     .nav-is-active &{
         color: var(--color-primary);
        
+        z-index: 5;
     }
 }
 
@@ -15,6 +16,13 @@
     top: 0;
     width: 100%;
     mix-blend-mode: difference;
+
+    .nav-is-active &{
+
+        @media screen and (max-width: 800px) {
+            mix-blend-mode: inherit;
+        }
+    }
     
     .wrapper{
         display: flex;
@@ -132,7 +140,7 @@
         .nav-is-active &{
             background-color: var(--color-primary);
         }
-        background-color: var(--color-black);
+        background-color: var(--color-primary);
         border-radius: 3px;
         height: var(--bar-height);
         width: 100%;
@@ -161,6 +169,17 @@
     }
 
 }
+
+
+
+.nav-is-active body {
+    overflow: auto;
+
+    @media screen and (max-width: 800px) {
+        overflow: hidden !important;
+    }
+}
+
 
 
 
