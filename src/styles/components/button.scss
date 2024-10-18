@@ -12,7 +12,12 @@
     background: none;
     z-index: 1;
    
-    
+    @media screen and (max-width: 800px) {
+        padding: 5px 10px;
+
+        border-width: 2px;
+         
+     }
 
     &:hover{
         color: inherit;

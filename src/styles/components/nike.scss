@@ -197,3 +197,74 @@
 }
 
 
+.modal{
+    display: none; 
+  position: fixed; 
+  z-index: 20; 
+  
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.95); 
+
+
+  .modal-content {
+    
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+  }
+
+
+  .caption {
+    
+    font-size: #{typo(20px, 25px)};
+    margin-top: 10px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-primary);
+  }
+
+
+  .modal-content, .caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    fill: var(--color-primary);
+    
+    
+  }
+}
+
+
+
+.is-modal-open{
+
+   
+    body{
+        overflow: hidden !important;
+    }
+
+    .modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+

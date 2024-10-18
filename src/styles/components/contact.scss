@@ -6,6 +6,12 @@
     position: relative;
     overflow-y: hidden;
 
+    @media screen and (max-width: 960px) {
+                
+        overflow-y: inherit;
+        height: fit-content;
+     }
+
     .wrapper {
         height: 100%;
         display: flex;
@@ -17,10 +23,20 @@
         display: grid;
         grid-template-columns: 4fr 6fr;
         gap: 175px;
+
+        @media screen and (max-width: 1150px) {
+                
+            gap: 50px;
+        }
+
+        @media screen and (max-width: 960px) {
+                
+           grid-template-columns: 1fr;
+        }
     }
 
     h1 {
-        font-size: #{typo(20px, 65px)};
+        font-size: #{typo(18px, 65px)};
         text-transform: uppercase;
     }
 }
@@ -31,6 +47,21 @@
     flex-direction: column;
     
     gap: 60px;
+
+    @media screen and (max-width: 960px) {
+                
+        display: grid;
+        grid-template-columns: 5fr 6fr;
+        gap: 40px;
+     }
+
+     @media screen and (max-width: 600px) {
+                
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+     }
+
 
     .contact-title{
         color: var(--color-black);
@@ -48,8 +79,14 @@
         flex-direction: column;
         gap: 30px;
 
+        @media screen and (max-width: 960px) {
+                
+            
+         }
+    
+
         a {
-            font-size: #{typo(20px, 25px)};
+            font-size: #{typo(14px, 25px)};
             text-decoration: underline;
             font-weight: 400;
         }
@@ -60,4 +97,16 @@
             gap: 15px;
         }
     }
+
+
+
+    
 }
+
+
+.contact-bottom{
+        @media screen and (max-width: 960px) {
+                
+            margin-top: 50px;
+        }
+    }

@@ -45,20 +45,23 @@
     z-index: 1;
     padding: 100px;
     background-color: var(--color-black);
+    
 
     @media screen and (max-width: 900px) {
-        padding: 75px;
+        padding: 100px 75px;
     }
 
     @media screen and (max-width: 700px) {
-        padding: 50px;
+        padding: 75px 50px;
     }
 
     @media screen and (max-width: 475px) {
-        padding: 20px;
+        padding: 75px 10px;
     }
 
-
+    h2,p{
+        opacity:calc(2 * var(--progress)) ;
+    }
 
     h2 {
         text-transform: inherit;
@@ -79,6 +82,10 @@
     z-index: 1;
     position: relative;
     background-color: var(--color-black);
+
+    @media screen and (max-width: 800px) {
+        padding: 50px 0;
+    }
 
     .plus {
         margin-top: 30px;
@@ -216,14 +223,31 @@
         width: 100vw;
         height: 100vh;
         padding:100px;
+
+       
         display: flex;
         flex-direction: column;
         gap: 50px;
         justify-content: center;
+        align-items: flex-start;
         color: var(--color-primary);
 
+        @media screen and (max-width: 1050px) {
+            justify-content: flex-start;
+        }
+
+
+        @media screen and (max-width: 800px) {
+                    padding:100px 50px ;
+                    gap: 20px;
+                }
         h2 {
-            font-size: #{typo(25px, 60px)};
+            font-size: #{typo(20px, 60px)};
+
+
+            @media screen and (max-width: 1050px) {
+                padding-top: 100px;
+            }
         }
 
         ul {
@@ -234,8 +258,10 @@
             
             padding: 0;
 
+           
+
             li {
-                font-size: #{typo(18px, 25px)};
+                font-size: #{typo(14px, 25px)};
             }
             span {
                 font-weight: 600;
@@ -250,8 +276,11 @@
     z-index: 1;
     position: relative;
     height: 100vh;
+    width: 100vw;
     color: var(--color-primary);
     overflow: hidden;
+
+    
 
     .wrapper {
         display: flex;
@@ -267,6 +296,7 @@
     }
 
     ul {
+        z-index: 4;
         position: absolute;
         top: 100%;
         right: 0;
@@ -279,11 +309,16 @@
         padding-right: 80px;
 
         li {
-            font-size: #{typo(30px, 75px)};
+            font-size: #{typo(20px, 75px)};
             font-weight: 600;
             text-transform: uppercase;
             opacity: 0;
             transition: all 0.7s ease;
+            
+
+            @media screen and (max-width: 800px) {
+                opacity: 1;
+            }
         }
     }
 }

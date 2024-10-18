@@ -56,5 +56,21 @@ export default class Cursor {
         cursor.classList.remove('cursor-hover');
       });
     }
+
+
+
+    const imgProjets = document.querySelectorAll('.hover-img');
+
+    for (let i = 0; i < imgProjets.length; i++) {
+      const img = imgProjets[i];
+
+      img.addEventListener('mouseover', (e) => {
+        cursor.classList.add('cursor-hover');
+      });
+
+      img.addEventListener('mouseout', (e) => {
+        cursor.classList.remove('cursor-hover');
+      });
+    }
   }
 }

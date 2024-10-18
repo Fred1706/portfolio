@@ -103,7 +103,7 @@ export default class Langages {
   }
 
   observeLi(entries) {
-    console.log('li');
+    
 
     for (let i = 0; i < entries.length; i++) {
       const entry = entries[i];

@@ -9,6 +9,7 @@ import Cursor from './components/cursor';
 import Langages from './components/Langages';
 import Projet from './components/Projet';
 import Projets from './components/Projets';
+import Modales from './components/Modales';
 
 
 export default class ComponentFactory {
@@ -25,6 +26,7 @@ export default class ComponentFactory {
       Langages,
       Projet,
       Projets,
+      Modales,
     };
     this.init();
   }

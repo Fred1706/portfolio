@@ -1,12 +1,10 @@
 .projets {
     position: relative;
     display: flex;
-    
+
     background-color: var(--color-black);
     z-index: 1;
     overflow-x: hidden;
-
-    
 }
 
 .projet {
@@ -15,10 +13,23 @@
     flex-shrink: 0;
     width: 100vw;
     height: 100vh;
-    padding:100px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+
+    @media screen and (max-width: 980px) {
+        gap: 20px;
+
+        padding: 100px 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+        gap: 20px;
+
+        padding: 100px 20px;
+    }
 }
 
 .projet-title {
@@ -27,8 +38,15 @@
     position: absolute;
     left: 100px;
     top: 25%;
+
+    @media screen and (max-width: 980px) {
+        position: relative;
+        left: inherit;
+        top: inherit;
+    }
+    
     h2 {
-        font-size: #{typo(55px, 130px)};
+        font-size: #{typo(30px, 130px)};
         color: var(--color-primary);
         width: 100%;
         display: flex;
@@ -42,6 +60,11 @@
             max-width: 220px;
             height: 4px;
             background-color: var(--color-primary);
+
+            @media screen and (max-width: 700px) {
+                width: 30%;
+            
+            }
         }
     }
 
@@ -59,9 +82,25 @@
     justify-content: center;
     padding-left: 100px;
 
+    @media screen and (max-width: 1100px) {
+        padding-left: 0;
+    }
+
+    
+
     a {
         width: 80%;
         height: 100%;
+
+        @media screen and (max-width: 1450px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 1235px) {
+            width: 100%;
+        }
+
+       
     }
     img {
         border-radius: 40px;
@@ -72,9 +111,17 @@
         filter: brightness(0.3);
         transition: all 0.5s ease;
 
-        &:hover{
-            filter: brightness(0.7);
+        @media screen and (max-width: 1235px) {
+            filter: brightness(1);
         }
+
+        &:hover {
+            filter: brightness(0.7);
+
+            
+        }
+
+       
     }
 }
 
@@ -86,13 +133,48 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 1450px) {
+        padding-left: 12%;
+        width: 95%;
+    }
+
+    @media screen and (max-width: 1235px) {
+        padding-left: 10%;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        padding-left: 0;
+    }
+
+    @media screen and (max-width: 670px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
     p {
-        font-size: #{typo(15px, 25px)};
+        font-size: #{typo(12px, 25px)};
         margin: 0;
         color: var(--color-primary);
     }
 
-    .icon {
-        fill: inherit;
+    .logiciels {
+        display: flex;
+        gap: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            @media screen and (max-width: 670px) {
+                width: 30px;
+                height: 30px;
+            }
+
+           
+
+            
+        }
     }
 }

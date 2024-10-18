@@ -175,6 +175,22 @@
     @media screen and (max-width: 800px) {
         display: block;
     }
+    
+
+    .nav-is-active & {
+        span {
+            top: calc(50% - var(--bar-height) / 2);
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                transform: scaleX(0);
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
 
 }
 
