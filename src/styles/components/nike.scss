@@ -8,6 +8,10 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+
+        @media screen and (max-width: 760px) {
+            gap: 40px;
+        }
     }
 
     h1 {
@@ -35,12 +39,23 @@
 
     .but-media {
         margin-top: 50px;
+
+        @media screen and (max-width: 760px) {
+            margin-top: 0;
+        }
         img {
             border-radius: 40px;
+
+            @media screen and (max-width: 760px) {
+                border-radius: 20px;
+            }
+
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            aspect-ratio: 16/8;
+            object-position: top;
         }
     }
 }
@@ -50,6 +65,10 @@
     z-index: 1;
     padding: 100px 0;
     background-color: var(--color-black);
+
+    @media screen and (max-width: 800px) {
+        padding: 50px 0;
+    }
 
     .wrapper {
         display: flex;
@@ -63,6 +82,20 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         gap: 150px;
+
+        @media screen and (max-width: 1650px) {
+            gap: 100px;
+        }
+
+        @media screen and (max-width: 1400px) {
+            gap: 50px;
+        }
+
+        @media screen and (max-width: 800px) {
+            gap: 20px;
+
+            grid-template-columns: 1fr;
+        }
     }
 
     .credit {
@@ -70,13 +103,16 @@
         flex-direction: column;
         gap: 10px;
         width: 100%;
+        @media screen and (max-width: 800px) {
+            width: 80%;
+        }
     }
 
     h3 {
         text-transform: inherit;
         font-style: italic;
         color: var(--color-primary);
-        font-size: #{typo(16px, 24px)};
+        font-size: #{typo(12px, 24px)};
         font-weight: 300;
     }
 
@@ -85,7 +121,7 @@
         padding: 0;
         list-style-type: none;
         color: var(--color-primary);
-        font-size: #{typo(16px, 26px)};
+        font-size: #{typo(12px, 26px)};
         font-weight: 400;
         li {
             a {
@@ -100,6 +136,10 @@
         width: 100%;
         height: 1px;
         background-color: var(--color-primary);
+
+        @media screen and (max-width: 800px) {
+            width: 70%;
+        }
     }
 }
 
@@ -109,6 +149,7 @@
     background-color: var(--color-black);
     z-index: 1;
     display: flex;
+    overflow-x: hidden;
 }
 
 .ideation,
@@ -125,9 +166,25 @@
     justify-content: center;
     color: var(--color-primary);
 
+    @media screen and (max-width: 800px) {
+        padding: 80px 40px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 80px 40px;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    h2 {
+        font-size: #{typo(20px, 60px)};
+    }
+
     p {
         margin: 0;
-        font-size: #{typo(16px, 26px)};
+        font-size: #{typo(12px, 26px)};
     }
 }
 
@@ -136,6 +193,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     justify-items: center;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .projet-page-media {
@@ -145,6 +206,16 @@
         display: block;
         object-fit: cover;
         aspect-ratio: 16/9;
+
+        @media screen and (max-width: 800px) {
+            width: 90%;
+            height: 90%;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .legende {
@@ -152,6 +223,9 @@
         margin-top: 10px;
         font-weight: 300;
         font-style: italic;
+        @media screen and (max-width: 600px) {
+            margin-top: 5px;
+        }
     }
 }
 
@@ -168,103 +242,117 @@
     display: flex;
     padding: 100px 0;
 
-    .wrapper{
+    @media screen and (max-width: 1300px) {
+        padding: 50px 0;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 20px 0;
+    }
+
+    .wrapper {
         display: flex;
         justify-content: center;
     }
+
+    h2 {
+        font-size: #{typo(20px, 60px)};
+    }
 }
 
-
-.suivant-media{
+.suivant-media {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    justify-content: center; 
+    justify-content: center;
     color: var(--color-primary);
-    img{
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+
+    img {
         width: 100%;
         height: 100%;
         display: block;
         object-fit: cover;
         border-radius: 40px;
+
+        @media screen and (max-width: 900px) {
+            border-radius: 20px;
+        }
     }
-    p{
+    p {
         font-style: italic;
         font-weight: 400;
         margin: 0;
     }
+    .suivant-media-content {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
 
-.modal{
-    display: none; 
-  position: fixed; 
-  z-index: 20; 
-  
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: hidden;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.95); 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.95);
 
+    .modal-content {
+        display: block;
+        width: 80%;
+        max-width: 1000px;
+    }
 
-  .modal-content {
-    
-    display: block;
-    width: 80%;
-    max-width: 1000px;
-  }
+    .caption {
+        font-size: #{typo(20px, 25px)};
+        margin-top: 10px;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--color-primary);
+    }
 
+    .modal-content,
+    .caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
 
-  .caption {
-    
-    font-size: #{typo(20px, 25px)};
-    margin-top: 10px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-primary);
-  }
+    @keyframes zoom {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
 
-
-  .modal-content, .caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-
-
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    fill: var(--color-primary);
-    
-    
-  }
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        fill: var(--color-primary);
+    }
 }
 
-
-
-.is-modal-open{
-
-   
-    body{
+.is-modal-open {
+    body {
         overflow: hidden !important;
     }
 
-    .modal{
+    .modal {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
 }
-
