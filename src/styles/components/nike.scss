@@ -278,6 +278,8 @@
         display: block;
         object-fit: cover;
         border-radius: 40px;
+        aspect-ratio: 16/7;
+        object-position: top;
 
         @media screen and (max-width: 900px) {
             border-radius: 20px;
