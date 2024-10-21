@@ -18,16 +18,13 @@
     flex-direction: column;
     align-items: flex-start;
 
-
     @media screen and (max-width: 980px) {
         gap: 20px;
-
         padding: 100px 40px;
     }
 
     @media screen and (max-width: 500px) {
         gap: 20px;
-
         padding: 100px 20px;
     }
 }
@@ -44,7 +41,7 @@
         left: inherit;
         top: inherit;
     }
-    
+
     h2 {
         font-size: #{typo(30px, 130px)};
         color: var(--color-primary);
@@ -63,7 +60,6 @@
 
             @media screen and (max-width: 700px) {
                 width: 30%;
-            
             }
         }
     }
@@ -86,8 +82,6 @@
         padding-left: 0;
     }
 
-    
-
     a {
         width: 80%;
         height: 100%;
@@ -99,8 +93,6 @@
         @media screen and (max-width: 1235px) {
             width: 100%;
         }
-
-       
     }
     img {
         border-radius: 40px;
@@ -117,11 +109,7 @@
 
         &:hover {
             filter: brightness(0.7);
-
-            
         }
-
-       
     }
 }
 
@@ -171,10 +159,6 @@
                 width: 30px;
                 height: 30px;
             }
-
-           
-
-            
         }
     }
 }
