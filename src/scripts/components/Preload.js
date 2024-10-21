@@ -35,7 +35,7 @@ export default class Preload {
 
           localStorage.setItem('visit', 'no');
 
-          console.log(localStorage.getItem('visit'));
+          
         },
       });
     }

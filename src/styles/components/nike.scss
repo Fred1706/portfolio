@@ -61,6 +61,7 @@
 }
 
 .credits {
+   
     position: relative;
     z-index: 1;
     padding: 100px 0;
@@ -71,6 +72,7 @@
     }
 
     .wrapper {
+        opacity:calc(2 * var(--progress)) ;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -261,6 +263,7 @@
 }
 
 .suivant-media {
+    opacity:calc(2 * var(--progress)) ;
     width: 80%;
     display: flex;
     flex-direction: column;
