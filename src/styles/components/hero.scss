@@ -114,6 +114,7 @@
     a {
         display: flex;
         align-items: center;
+        justify-content: center;
         height: fit-content;
         gap: 20px;
         font-size: #{typo(20px, 28px)};
