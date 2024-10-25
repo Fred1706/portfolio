@@ -72,7 +72,7 @@
     }
 
     .wrapper {
-        opacity:calc(2 * var(--progress)) ;
+        opacity:calc(2.5 * var(--progress)) ;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -351,7 +351,7 @@
 
 .is-modal-open {
     body {
-        overflow: hidden !important;
+        height: 100%; overflow: hidden !important;
     }
 
     .modal {
@@ -360,4 +360,9 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+.is-modal-open{
+    height: 100%; overflow: hidden;
+   
 }
