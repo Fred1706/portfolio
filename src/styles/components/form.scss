@@ -30,6 +30,9 @@
 
 .form-footer{
     margin-right: auto;
+    button{
+        cursor: none;
+    }
 }
 
 .input-label {
@@ -37,6 +40,7 @@
     color: var(--color-black);
     font-weight: 500;
     cursor: none;
+    font-size: #{typo(12px, 25px)};
 }
 
 .input-element {

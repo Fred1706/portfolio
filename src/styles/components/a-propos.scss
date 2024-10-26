@@ -279,7 +279,9 @@
     width: 100vw;
     color: var(--color-primary);
     overflow: hidden;
-
+    @media screen and (max-width: 800px) {
+       height: 70vh;
+    }
     
 
     .wrapper {
