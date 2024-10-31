@@ -8,6 +8,8 @@
     transition: transform 0.7s ease;
     pointer-events: none;
     mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+    transform-origin: center;
 
     @media screen and (max-width: 1366px) {
         display: none;
@@ -24,7 +26,9 @@ a {
 }
 
 .cursor-hover {
-    transform: scale(2.5);
+    
+    transform-origin: center;
+    transform: scale(2.5) translate(-25%,-25%);
 }
 
 .cursor-hover-projet{

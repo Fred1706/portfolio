@@ -15,6 +15,9 @@ export default class Modales{
         const close = document.querySelector('.js-modal-close')
 
         close.addEventListener('click' , this.closeModal.bind(this));
+
+
+        document.addEventListener("keydown" , this.closeModal.bind(this))
     }
 
 
@@ -32,8 +35,13 @@ export default class Modales{
        
     }
 
-    closeModal(){
+    closeModal(event){
         document.documentElement.classList.remove('is-modal-open');
+
+
+        if (event.key === 'Escape') {
+            document.documentElement.classList.remove('is-modal-open');
+        }
  
         
      }
