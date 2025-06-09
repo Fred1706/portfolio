@@ -43,6 +43,27 @@
                 </div>
             </div>
 
+           <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const params = new URLSearchParams(window.location.search);
+                     if (params.get("success") === "1") {
+                            const form = document.querySelector(".form");
+                            const msg = document.querySelector(".msg");
+                            msg.style.display = "block";
+                            form.style.display = "none";
+                            console.log("form sent");
+                       }
+
+            });
+                
+            </script> 
+
+            <div class="msg" >
+                <h2 >Message envoyé avec succès</h2>
+                <p>Je suis ravi de votre intérêt. Je vous répondrai dans les plus brefs délais. </p>
+            </div>
+
             <form action="contact.php" method="POST" class="form" autocomplete="off" >
                 <div class="form-body">
                     <fieldset class="form-grid">

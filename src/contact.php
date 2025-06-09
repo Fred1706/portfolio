@@ -69,7 +69,8 @@ $fullMessage .= "Email: $email\n";
 $fullMessage .= "Message:\n$message";
 
 if (mail($to, $subject, $fullMessage, $headers)) {
-    echo "Message sent successfully.";
+     header("Location: contact.html?success=1");
+    exit();
 } else {
     http_response_code(500);
     echo "Message failed to send.";
